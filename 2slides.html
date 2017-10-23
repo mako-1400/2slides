@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Slider Pro</title>
+
+<link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function( $ ) {
+  // customize
+  $('.customize-slides').each(function(i) {
+    if( $(this).find('div.sp-slide').length == 2 ){
+      var spSlide = $(this).html().replace(/sp-slide/g,'sp-slide dSlide');
+      $(this).append(spSlide);
+    }
+  });
+
+  var time = 2000;
+  $( '#example1' ).sliderPro({
+    width: 1040,
+    height: 430,
+    autoplayDelay: time,
+    buttons: false,
+  });
+});
+</script>
+
+</head>
+
+<body>
+<style type="text/css">
+#example1 .sp-thumbnails-container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 996px!important;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+}
+</style>
+
+
+	<div class="slider-pro singleContentSliderWrap">
+		<div class="sp-slides customize-slides">
+		  <!--スーツクリアランス-->
+		  <div class="sp-slide"><a href="#"><img class="sp-image" src="img/sample01.jpg" /></a></div>
+		  <!--バーゲンセール-->
+		  <div class="sp-slide"><a href="#"><img class="sp-image" src="img/samlple03.jpg" /></a></div>
+		</div>
+		<!--/sp-slides-->
+	</div>
+
+
+<script type="text/javascript">
+$( document ).ready(function( $ ) {
+  // customize
+  $('.sp-slides').each(function(i) {
+    if( $(this).find('div.sp-slide').length == 2 ){
+      var spSlide = $(this).html().replace(/sp-slide/g,'sp-slide dSlide');
+      $(this).append(spSlide);
+    }
+  });
+
+  var time = 2000;
+  $( '.singleContentSliderWrap' ).sliderPro({
+    width:"100%",autoHeight:!0,
+    arrows:!0,buttons:!1,
+    fadeArrows:!1,
+    slideAnimationDuration:300,
+    buttons: false,
+  });
+});
+</script>
+
+
+
+</body>
+</html>
